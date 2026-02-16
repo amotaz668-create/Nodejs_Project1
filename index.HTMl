@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management System</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body style="background-color: black; color: white; ">
+    <h2>User Management System</h2>
+    <hr style="margin: 10px 10px 20px 0px;">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter username" style="margin-left: 21px;" />
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter email" style="margin-left: 21px;" />
+    </div>
+    
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" placeholder="Enter age" style="margin-left: 33px;" />
+    </div>
+<div>
+  <label for="specialty">Specialty:</label>
+    <select id="specialty" style="margin-bottom: 10px;">
+    <option value="">Choose specialty</option>
+    <option value="Backend">Backend</option>
+    <option value="Frontend">Frontend</option>
+    <option value="Fullstack">Fullstack</option>
+  </select>
+</div>
+
+    <button id="addUser">Add User</button>
+    <button id="cancel">Cancel</button>
+    <p id="msg"></p>
+    <hr>
+
+    <h3>You Can Search and Filter Here</h3>
+    <div>
+
+        <div>
+      <label for="search">Search:</label>
+      <input type="text" id="search" placeholder="Search by name or email" style="margin-left: 10px;" />
+        </div>
+        <div>
+        <label for="select">Filter by Specialty:</label>
+        <select id="select">
+            <option value="all">All</option>
+            <option value="Backend">Backend</option>
+            <option value="Frontend">Frontend</option>
+            <option value="Fullstack">Fullstack</option>
+        </select>
+    </div>
+    <br>
+      <table border="1" cellpadding="8" cellspacing="5" width="50%">
+        <thead>
+          <tr>
+
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Specialty</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <!-- User rows will be added here dynamically -->
+        </tbody>
+      </table>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
